@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+    tty: true
+    #command: bash -c "NEW_RELIC_CONFIG_FILE=/code/newrelic.ini newrelic-admin run-program flask run"
+  redis:
+    image: "redis:alpine"
